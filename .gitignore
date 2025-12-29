@@ -1,8 +1,4 @@
 .vscode
-*.exe
-*.o
-*.dll
-build
-data.txt
-cmake-build-*
 .idea
+
+/target
