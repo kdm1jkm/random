@@ -2,10 +2,21 @@
 name = "random"
 version = "1.0.0"
 edition = "2024"
+authors = ["kdm1jkm"]
+repository = "https://github.com/kdm1jkm/random"
+description = "A simple random number generator application"
+license = "MIT"
+
+[package.metadata.wix]
+upgrade-guid = "B5B6B09E-7AC5-4E1A-8035-020F41221DFC"
+path-guid = "0AED68FA-E2D2-4E9A-BABC-1C0A89F16663"
+license = false
+eula = false
 
 [dependencies]
 anyhow = "1.0.100"
 inquire = "0.9.1"
 
-[workspace]
-cargo-dist = true
+[profile.dist]
+inherits = "release"
+lto = "thin"
